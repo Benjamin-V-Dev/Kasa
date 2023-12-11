@@ -1,0 +1,33 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 68px;
+    margin: 0 50px 50px 50px;
+
+    .header-logo{
+        height: 68px;
+        width: 210px;
+    }
+
+    nav{
+        font-size: 24px;
+        display: flex;
+        width: 309px;
+        justify-content: flex-end;
+        color: $orange;
+
+        a{
+            color: $orange;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        .link1{
+            margin-right: 75px;
+        }
+    }
+
+}
