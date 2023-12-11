@@ -37,7 +37,7 @@ $orange: rgba(255, 96, 96, 1);
 .app{
     width: 100%;
     max-width: 1440px;
-    padding: 25px 50px;
+    margin: 0 auto;
 }
 
 
@@ -49,3 +49,5 @@ $orange: rgba(255, 96, 96, 1);
 // ************************************************
 @import "header";
 @import "banner";
+@import "./thumbs";
+@import "footer";

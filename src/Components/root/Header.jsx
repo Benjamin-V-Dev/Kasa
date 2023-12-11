@@ -5,7 +5,9 @@ export default function Header() {
   return (
     <header>
         <div className="header-logo">
-          <img src="public/logo.png" alt='Logo de Kasa, la lettre "A" représente une maison' />
+          <a href="/">
+            <img src="public/logo.png" alt='Logo de Kasa, la lettre "A" représente une maison' />
+          </a>
         </div>
         <Navbar></Navbar>
     </header>

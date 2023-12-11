@@ -1,0 +1,23 @@
+footer{
+    position: absolute;
+    left:0px;
+
+    background-color: black;
+    height: 209px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    img{
+        display: block;
+        height: 40px;
+        width: 122px;
+    }
+
+    p{
+        margin-top: 50px;
+    }
+}
