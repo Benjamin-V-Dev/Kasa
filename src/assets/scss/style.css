@@ -166,6 +166,34 @@ header nav .link1 {
   height: 50px;
 }
 
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0;
+  color: rgb(255, 96, 96);
+}
+.error h1 {
+  font-size: 288px;
+}
+.error p {
+  font-size: 36px;
+  margin: 75px 0;
+}
+.error a {
+  text-decoration: underline;
+  color: rgb(255, 96, 96);
+  font-size: 18px;
+}
+.error a:hover {
+  font-weight: 500;
+  cursor: pointer;
+}
+.error a p {
+  margin: 0px;
+}
+
 footer {
   position: absolute;
   left: 0px;
