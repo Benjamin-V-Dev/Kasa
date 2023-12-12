@@ -28,6 +28,7 @@
 // ***********         COLOR CSS         **********
 // ************************************************
 $orange: rgba(255, 96, 96, 1);
+$grey: rgba(246, 246, 246, 1);
 
 
 // ************************************************
@@ -50,4 +51,5 @@ $orange: rgba(255, 96, 96, 1);
 @import "header";
 @import "banner";
 @import "./thumbs";
+@import "dropdown";
 @import "footer";
