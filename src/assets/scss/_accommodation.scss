@@ -83,7 +83,6 @@
     /* Début de la séction tags et notes */
     .tags-and-rate{
         width: 100%;
-        border: 1px solid black;
         display: flex;
         justify-content: space-between;
         margin: 10px 0px;
@@ -109,6 +108,16 @@
                 }
 
             }
+        }
+
+    }
+    .master-dropdown{
+        width: 100%;
+        gap: 100px;
+        display: flex;
+
+        .dropdown{
+            width: 50%;
         }
     }
 }

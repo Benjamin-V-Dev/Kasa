@@ -14,7 +14,7 @@ export default function About() {
 
   return (
     <>
-      <Banner />
+      <Banner imageUrl={'banner2.png'} imageAlt={'Paysage de montagne'}  bannerContent={""}/>
       <div className="master-dropdown">
         <Dropdown title="Fiabilité" content={contentDropdownAbout[0]} />
         <Dropdown title="Respect" content={contentDropdownAbout[1]} />

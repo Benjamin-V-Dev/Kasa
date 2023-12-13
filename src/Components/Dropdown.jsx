@@ -14,18 +14,31 @@ export default function Dropdown({title, content}) {
     }
   };
 
+  // Fonction pour analyser "content"
+
+  let contentArray = [];
+
+  if (typeof content === 'object' && content !== null) {
+    // Transformer les valeurs de l'objet en un tableau
+    contentArray = Object.values(content);
+  } else if(typeof content ==='string' || typeof content ==='number'){
+    // Transformer les valeurs autres en un tableau
+    contentArray = [content];
+  }
+
   return (
     <div className={`dropdown ${isActive ? 'dropdown-active' : ''}`}>
-      <div className="title-dropdown">
+      <div onClick={toggleStyle} className="title-dropdown">
         <p>{title}</p>
         <i onClick={toggleStyle} 
         className={`fa-solid ${isActive ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
-        {/* className="fa-solid fa-chevron-up"></i> */}
       </div>
       <div className={`content-dropdown ${isActive ? 'content-dropdown-active' : ''}`}>
-        <ul>
-          <li>{content}</li>
-        </ul>
+      <ul>
+        {contentArray.map((li, index) => (
+          <li key={index}>{li}</li>
+        ))}
+      </ul>
       </div>
     </div>
   )

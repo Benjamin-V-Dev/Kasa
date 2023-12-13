@@ -2,6 +2,7 @@ import Filter from "../../Components/Tag";
 import Slider from "../../Components/Slider";
 import {useParams} from 'react-router-dom'
 import Rank from "../../Components/Rank";
+import Dropdown from "../../Components/Dropdown";
 
 export default function Accommodation({data}) {
 
@@ -39,7 +40,13 @@ export default function Accommodation({data}) {
           <div className="master-rate">
               <Rank rank={element.rating}/>
           </div>
+        </div>
 
+
+        {/* Début des dropdown */}
+        <div className="master-dropdown">
+            <Dropdown title={"Description"} content={element.description}/>
+            <Dropdown title={"Équipements"} content={element.equipments}/>
         </div>
     </div>
   )

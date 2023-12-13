@@ -1,14 +1,12 @@
 .master-dropdown{
     margin: 50px 0;
+    width: 1000px;
 }
 
 .dropdown{
-    width: 1000px;
+    width: 100%;
     margin: 30px auto;
     position: relative;
-    
-   
-
 
     .title-dropdown{
         position: absolute;
@@ -23,6 +21,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        i{
+            cursor: pointer;
+        }
     }
     
     
@@ -32,7 +34,6 @@
         background-color: $grey;
         padding: 75px 20px 19px 20px;
         border-radius: 5px;
-        // display: none;
 
         ul{
             list-style-type: none;
