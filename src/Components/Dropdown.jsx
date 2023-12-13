@@ -13,7 +13,7 @@ export default function Dropdown({title, content}) {
       // console.log("fermé");
     }
   };
-  
+
   return (
     <div className={`dropdown ${isActive ? 'dropdown-active' : ''}`}>
       <div className="title-dropdown">

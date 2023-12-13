@@ -1,7 +1,7 @@
-export default function thumb() {
+export default function thumb({id}) {
   return (
     <div className="thumb">
-        <p>Titre de la<br></br> location</p>
+        <p>{id.title}</p>
     </div>
   )
 }

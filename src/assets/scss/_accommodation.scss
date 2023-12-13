@@ -1,0 +1,114 @@
+.accommodation{
+    margin: 0 auto;
+    max-width: 1240px;
+    
+    /* Début du Slider */
+    .slider{
+        height: 415px;
+        width: 100%;
+        position: relative;
+        margin-bottom: 50px;
+        
+        img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+
+        .arrow-left{
+            position: absolute;
+            font-size: 55px;
+            top: 155px;
+            left: 25px;
+            color: rgba(255, 255, 255, 1);
+            z-index: 999;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        .arrow-right{
+            position: absolute;
+            font-size: 55px;
+            top: 155px;
+            right: 25px;
+            color: rgba(255, 255, 255, 1);
+            z-index: 999;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+
+    /* Début de la séction titres et profil */
+    .headings-and-profile{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $orange;
+
+        p{
+            font-size: 18px;
+        }
+
+        .headings{
+            h2{
+                font-size: 36px;
+            }
+        }
+        .profile{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 10%;
+            text-align: right;
+
+
+            img{
+                display: block;
+                height: 64px;
+                width: 64px;
+                border-radius: 50%;
+                margin-left: 10px;
+            }
+        }
+    }
+
+
+    /* Début de la séction tags et notes */
+    .tags-and-rate{
+        width: 100%;
+        border: 1px solid black;
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0px;
+
+        .master-tags{
+            display: flex;
+            width: 50%;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .master-rate{
+            width: 50%;
+            display: flex;
+            justify-content: end;
+            
+            .rate{
+                img{
+                    height: 24px;
+                    width: 24px;
+                    margin-left: 15px;
+                }
+
+            }
+        }
+    }
+}
