@@ -23,6 +23,15 @@
     font-family: "Montserrat", sans-serif;
 }
 
+h1{
+    @font-face {
+        font-family: "Montserrat-500";
+        src: url(../font/Montserrat/static/Montserrat-Medium.ttf);
+    }
+
+    font-family: "Montserrat-500", sans-serif;
+}
+
 
 // ************************************************
 // ***********         COLOR CSS         **********
@@ -36,7 +45,7 @@ $grey: rgba(246, 246, 246, 1);
 // ************************************************
 
 .app{
-    width: 100%;
+    width: 90%;
     max-width: 1440px;
     margin: 0 auto;
 }

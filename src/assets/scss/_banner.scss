@@ -33,3 +33,26 @@
     }
 
 }
+
+
+@media (max-width: 375px) {
+    .banner{
+        height: 110px;
+        margin-top: 20px;
+
+        img{
+            border-radius: 10px;
+        }
+    
+        .banner-filter{
+            border-radius: 10px;
+        }
+
+        h1{
+            font-size: 24px;
+            margin-right: 30px;
+            margin-left: 10px;
+        }
+
+    }
+}

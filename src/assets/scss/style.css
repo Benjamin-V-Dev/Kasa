@@ -15,8 +15,16 @@
   font-family: "Montserrat", sans-serif;
 }
 
+h1 {
+  font-family: "Montserrat-500", sans-serif;
+}
+@font-face {
+  font-family: "Montserrat-500";
+  src: url(../font/Montserrat/static/Montserrat-Medium.ttf);
+}
+
 .app {
-  width: 100%;
+  width: 90%;
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -33,24 +41,66 @@ header .header-logo {
   height: 68px;
   width: 210px;
 }
+header .header-logo a {
+  width: 100%;
+  height: 100%;
+}
+header .header-logo a img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 header nav {
   font-size: 24px;
   display: flex;
-  width: 309px;
-  justify-content: flex-end;
+  width: 250px;
+  justify-content: space-between;
   color: rgb(255, 96, 96);
 }
 header nav a {
   color: rgb(255, 96, 96);
   text-decoration: none;
 }
-header nav a:hover {
+header nav .link1 {
+  margin-right: 25%;
+}
+header .active {
   text-decoration: underline;
 }
-header nav .link1 {
-  margin-right: 75px;
-}
 
+@media (max-width: 375px) {
+  header {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  header .header-logo {
+    width: 40%;
+    margin-right: 5%;
+  }
+  header .header-logo a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header .header-logo a img {
+    height: auto;
+    max-width: 145px;
+  }
+  header nav {
+    width: 50%;
+  }
+  header nav a {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+  }
+  header nav .link1 {
+    margin-right: 10px;
+  }
+}
 .banner {
   position: relative;
   height: 223px;
@@ -82,6 +132,23 @@ header nav .link1 {
   color: rgb(255, 255, 255);
 }
 
+@media (max-width: 375px) {
+  .banner {
+    height: 110px;
+    margin-top: 20px;
+  }
+  .banner img {
+    border-radius: 10px;
+  }
+  .banner .banner-filter {
+    border-radius: 10px;
+  }
+  .banner h1 {
+    font-size: 24px;
+    margin-right: 30px;
+    margin-left: 10px;
+  }
+}
 .home-section-thumb {
   max-width: 1240px;
   margin: 50px auto;
@@ -118,19 +185,35 @@ header nav .link1 {
   bottom: 20px;
   left: 20px;
   color: white;
+  margin-right: 50px;
 }
 
+@media (max-width: 375px) {
+  .home-section-thumb {
+    background-color: transparent;
+    flex-direction: column;
+    margin: 20px 0;
+    padding: 0;
+    gap: 20px;
+  }
+  .home-section-thumb .thumb {
+    width: 100%;
+    height: 255px;
+  }
+  .home-section-thumb .thumb p {
+    font-size: 18px;
+  }
+}
 .master-dropdown {
-  margin: 50px 0;
+  margin: 0 auto;
   width: 1000px;
 }
-
-.dropdown {
+.master-dropdown .dropdown {
   width: 100%;
   margin: 30px auto;
   position: relative;
 }
-.dropdown .title-dropdown {
+.master-dropdown .dropdown .title-dropdown {
   position: absolute;
   top: 0;
   height: 50px;
@@ -144,33 +227,55 @@ header nav .link1 {
   justify-content: space-between;
   align-items: center;
 }
-.dropdown .title-dropdown i {
+.master-dropdown .dropdown .title-dropdown i {
   cursor: pointer;
 }
-.dropdown .content-dropdown {
+.master-dropdown .dropdown .content-dropdown {
   height: auto;
   width: 100%;
   background-color: rgb(246, 246, 246);
   padding: 75px 20px 19px 20px;
   border-radius: 5px;
 }
-.dropdown .content-dropdown ul {
+.master-dropdown .dropdown .content-dropdown ul {
   list-style-type: none;
 }
-.dropdown .content-dropdown ul li {
+.master-dropdown .dropdown .content-dropdown ul li {
   line-height: 25.67px;
   font-size: 18px;
   color: rgb(255, 96, 96);
   font-weight: 400;
 }
-.dropdown .content-dropdown-active {
+.master-dropdown .dropdown .content-dropdown-active {
   display: none;
 }
-
-.dropdown-active {
+.master-dropdown .dropdown-active {
   height: 50px;
 }
 
+@media (max-width: 375px) {
+  .master-dropdown {
+    min-height: 51.5vh;
+    width: 100%;
+  }
+  .master-dropdown .dropdown {
+    margin: 20px 0 20px 0;
+  }
+  .master-dropdown .dropdown .title-dropdown {
+    font-size: 13px;
+    height: 30px;
+  }
+  .master-dropdown .dropdown .content-dropdown {
+    padding: 40px 10px 10px 10px;
+  }
+  .master-dropdown .dropdown .content-dropdown ul li {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .master-dropdown .dropdown-active {
+    height: 30px;
+  }
+}
 .error {
   display: flex;
   flex-direction: column;
@@ -199,6 +304,31 @@ header nav .link1 {
   margin: 0px;
 }
 
+@media (max-width: 375px) {
+  .error {
+    min-height: 48.4vh;
+  }
+  .error h1 {
+    font-size: 96px;
+  }
+  .error p {
+    font-size: 18px;
+    text-align: center;
+  }
+  .error a {
+    text-decoration: underline;
+    color: rgb(255, 96, 96);
+    font-size: 18px;
+  }
+  .error a:hover {
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .error a p {
+    font-size: 14px;
+    margin: 0px;
+  }
+}
 .accommodation {
   margin: 0 auto;
   max-width: 1240px;
@@ -320,7 +450,7 @@ footer {
   left: 0px;
   background-color: black;
   height: 209px;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -334,4 +464,11 @@ footer img {
 }
 footer p {
   margin-top: 50px;
+}
+
+@media (max-width: 375px) {
+  footer p {
+    font-size: 12px;
+    margin: 30px 100px 0px 100px;
+  }
 }/*# sourceMappingURL=style.css.map */

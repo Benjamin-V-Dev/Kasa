@@ -1,7 +1,9 @@
 import {useState} from 'react'
 
 
-export default function Slider({id, pictures}) {
+export default function Slider({pictures}) {
+
+    const alone = pictures.length === 1 ? { display: 'none' } : {};
 
     let [imgUrl, setImgUrl] = useState(0)
 
@@ -23,9 +25,9 @@ export default function Slider({id, pictures}) {
     
     return (
         <div className="slider">
-            <p onClick={prevImg} className="arrow-left">＜</p>
+            <p onClick={prevImg} style={alone} className="arrow-left">＜</p>
             <img src={pictures[imgUrl]} alt="Slider Image" />
-            <p onClick={nextImg} className="arrow-right">＞</p>
+            <p onClick={nextImg} style={alone} className="arrow-right">＞</p>
         </div>
     )
 }

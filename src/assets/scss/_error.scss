@@ -32,3 +32,36 @@
     }
 
 }
+
+
+@media (max-width: 375px) {
+    .error{
+        min-height:48.4vh;
+    
+        h1{
+            font-size: 96px;
+        }
+        
+        p{
+            font-size: 18px;
+            text-align: center;
+        }
+    
+        a{
+            text-decoration: underline;
+            color: $orange;
+            font-size: 18px;
+            
+            &:hover {
+                font-weight: 500;
+                cursor: pointer;
+            }
+            
+            p{
+                font-size: 14px;
+                margin: 0px;
+            }
+        }
+    
+    }
+}
