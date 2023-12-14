@@ -1,14 +1,14 @@
 header{
-    padding: 75px 50px 50px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 68px;
-    margin: 0 50px 50px 50px;
+    margin: 0 auto;
+    padding: 50px 0;
+    max-width: 1240px;
 
     .header-logo{
-        height: 68px;
-        width: 210px;
+        height: 100%;
+        width: auto;
 
         a{
             width: 100%;
@@ -17,16 +17,17 @@ header{
             img{
                 display: block;
                 width: 100%;
-                height: auto;
+                height: 100%;
             }
         }
     }
 
     nav{
-        font-size: 24px;
+        width: auto;
         display: flex;
-        width: 250px;
         justify-content: space-between;
+        gap: 50px;
+        font-size: 24px;
         color: $orange;
 
 
@@ -34,9 +35,6 @@ header{
             color: $orange;
             text-decoration: none;
 
-        }
-        .link1{
-            margin-right: 25%;
         }
     }
     .active {
@@ -47,41 +45,43 @@ header{
 
 // Début du responsive :
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
     header{
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        justify-content: center;
-        align-items: center;
-
-        .header-logo{
-            width: 40%;
-            margin-right: 5%;
-            a{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                img{
-                    height: auto;
-                    max-width: 145px;
-                }
-            }
-        }
 
         nav{
-            width: 50%;
+            font-size: 20px;
+            gap: 30px;
+        }
+    }
+}
 
+@media (max-width: 600px) {
+    header{
 
-            a{
-                font-size: 12px;
-                margin: 0;
-                padding: 0;
-            }
-            .link1{
-                margin-right: 10px;
-            }
+        .header-logo{
+            height: auto;
+            width: 30%;
+        }
+        
+        nav{
+            font-size: 16px;
+            gap: 10px;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    header{
+        padding: 25px 0;
+
+        .header-logo{
+            height: auto;
+            width: 30%;
+        }
+        
+        nav{
+            font-size: 14px;
+            gap: 10px;
         }
     }
 }

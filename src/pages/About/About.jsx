@@ -15,11 +15,13 @@ export default function About() {
   return (
     <>
       <Banner imageUrl={'banner2.png'} imageAlt={'Paysage de montagne'}  bannerContent={""}/>
-      <div className="master-dropdown">
-        <Dropdown title="Fiabilité" content={contentDropdownAbout[0]} />
-        <Dropdown title="Respect" content={contentDropdownAbout[1]} />
-        <Dropdown title="Service" content={contentDropdownAbout[2]} />
-        <Dropdown title="Sécurité" content={contentDropdownAbout[3]}/>
+      <div className="layout-dropdown-about">
+        <div className="master-dropdown">
+          <Dropdown title="Fiabilité" content={contentDropdownAbout[0]} />
+          <Dropdown title="Respect" content={contentDropdownAbout[1]} />
+          <Dropdown title="Service" content={contentDropdownAbout[2]} />
+          <Dropdown title="Sécurité" content={contentDropdownAbout[3]}/>
+        </div>
       </div>
     </>
   )

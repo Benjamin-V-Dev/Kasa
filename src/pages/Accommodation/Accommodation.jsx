@@ -21,32 +21,31 @@ export default function Accommodation({data}) {
           <div className='headings'>
             <h2>{element.title}</h2>
             <p>{element.location}</p>
+            <div className="master-tags">
+              {element.tags.map((tag, index) => (
+                <Filter key={index} tag={tag} />
+              ))}
+            </div>
           </div>
 
           <div className='profile'>
-            <p>{element.host.name}</p>
-            <img src={element.host.picture} alt="" />
-          </div>
-
-        </div>
-
-        {/* Début de la séction tags et notes */}
-        <div className="tags-and-rate">
-          <div className="master-tags">
-            {element.tags.map((tag, index) => (
-              <Filter key={index} tag={tag} />
-            ))}
-          </div>
-          <div className="master-rate">
+            <div className="profile-host">
+              <p>{element.host.name}</p>
+              <img src={element.host.picture} alt="" />
+            </div>
+            <div className="master-rate">
               <Rank rank={element.rating}/>
+            </div>
           </div>
         </div>
 
 
         {/* Début des dropdown */}
-        <div className="master-dropdown">
-            <Dropdown title={"Description"} content={element.description}/>
-            <Dropdown title={"Équipements"} content={element.equipments}/>
+        <div className="layout-dropdown-accommodation">
+          <div className="master-dropdown">
+              <Dropdown title={"Description"} content={element.description}/>
+              <Dropdown title={"Équipements"} content={element.equipments}/>
+          </div>
         </div>
     </div>
   )
