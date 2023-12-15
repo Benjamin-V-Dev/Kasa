@@ -1,14 +1,25 @@
 import Filter from "../../Components/Tag";
 import Slider from "../../Components/Slider";
-import {useParams} from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom';
 import Rank from "../../Components/Rank";
 import Dropdown from "../../Components/Dropdown";
+import { useEffect } from 'react';
 
 export default function Accommodation({data}) {
+  let { id } = useParams();
+  let navigate = useNavigate();
 
-  let {id} = useParams()
-  let idTarget = id;
-  let element = data.find(item => item.id === idTarget);
+  useEffect(() => {
+    if (!data.some(item => item.id === id)) {
+      navigate('/404'); // Redirection vers la page d'erreur si l'ID n'est pas valide
+    }
+  }, [id, data, navigate]);
+
+  let element = data.find(item => item.id === id);
+
+  if (!element) {
+    return null; // Renvoie null si l'élément n'est pas trouvé (en attendant la redirection)
+  }
 
   return (
     <div className="accommodation">
