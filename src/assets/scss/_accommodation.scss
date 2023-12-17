@@ -1,21 +1,51 @@
+
 .accommodation{
     margin: 0 auto;
     max-width: 1240px;
     
     /* Début du Slider */
+
     .slider{
         aspect-ratio: 4/2;
         width: 100%;
         position: relative;
         margin-bottom: 50px;
         
-        img{
-            display: block;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
             border-radius: 25px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
         }
+
+        .current-img {
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .slide-left-enter, .slide-right-leave {
+            animation: slideLeft 1s forwards;
+        }
+
+        .slide-right-enter, .slide-left-leave {
+            animation: slideRight 1s forwards;
+        }
+
+        @keyframes slideLeft {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes slideRight {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+    
 
         .arrow-left{
             position: absolute;
@@ -24,9 +54,11 @@
             left: 25px;
             color: rgba(255, 255, 255, 1);
             z-index: 999;
+            transition: transform 0.3s ease-in-out;
 
             &:hover{
                 cursor: pointer;
+                transform: scale(1.25);
             }
         }
         .arrow-right{
@@ -36,9 +68,12 @@
             right: 25px;
             color: rgba(255, 255, 255, 1);
             z-index: 999;
+            transition: transform 0.3s ease-in-out;
+
 
             &:hover{
                 cursor: pointer;
+                transform: scale(1.25);
             }
         }
     }

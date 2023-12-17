@@ -170,6 +170,7 @@ header .active {
   position: relative;
   width: 30%;
   margin: 5% 0;
+  transition: transform 0.5s ease-in-out;
 }
 .home-section-thumb .thumb .thumb-filter {
   position: absolute;
@@ -193,6 +194,10 @@ header .active {
   left: 20px;
   color: white;
   margin-right: 50px;
+}
+.home-section-thumb .thumb:hover {
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
 @media (max-width: 1200px) {
@@ -383,12 +388,42 @@ header .active {
   margin-bottom: 50px;
 }
 .accommodation .slider img {
-  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 25px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.accommodation .slider .current-img {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.accommodation .slider .slide-left-enter, .accommodation .slider .slide-right-leave {
+  animation: slideLeft 1s forwards;
+}
+.accommodation .slider .slide-right-enter, .accommodation .slider .slide-left-leave {
+  animation: slideRight 1s forwards;
+}
+@keyframes slideLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 .accommodation .slider .arrow-left {
   position: absolute;
@@ -397,9 +432,11 @@ header .active {
   left: 25px;
   color: rgb(255, 255, 255);
   z-index: 999;
+  transition: transform 0.3s ease-in-out;
 }
 .accommodation .slider .arrow-left:hover {
   cursor: pointer;
+  transform: scale(1.25);
 }
 .accommodation .slider .arrow-right {
   position: absolute;
@@ -408,9 +445,11 @@ header .active {
   right: 25px;
   color: rgb(255, 255, 255);
   z-index: 999;
+  transition: transform 0.3s ease-in-out;
 }
 .accommodation .slider .arrow-right:hover {
   cursor: pointer;
+  transform: scale(1.25);
 }
 .accommodation .headings-and-profile {
   display: flex;

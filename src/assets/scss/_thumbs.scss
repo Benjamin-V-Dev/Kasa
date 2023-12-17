@@ -15,6 +15,8 @@
         position: relative;
         width: 30%;
         margin: 5% 0;
+        transition: transform 0.5s ease-in-out;
+
 
         .thumb-filter{
             position: absolute;
@@ -39,6 +41,11 @@
             left: 20px;
             color: white;
             margin-right: 50px;
+        }
+
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.05);
         }
     }
 }
