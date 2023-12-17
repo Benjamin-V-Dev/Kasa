@@ -13,7 +13,7 @@ export default function About() {
 
 
   return (
-    <>
+    <div className="about">
       <Banner imageUrl={'banner2.png'} imageAlt={'Paysage de montagne'}  bannerContent={""}/>
       <div className="layout-dropdown-about">
         <div className="master-dropdown">
@@ -23,7 +23,7 @@ export default function About() {
           <Dropdown title="Sécurité" content={contentDropdownAbout[3]}/>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

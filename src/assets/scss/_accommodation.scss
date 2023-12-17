@@ -76,6 +76,16 @@
                 transform: scale(1.25);
             }
         }
+        .image-counter{
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            // left: calc(50% - 22px);
+            font-size: 18px;
+            font-weight: semi-bold;
+            color: white;
+        }
     }
 
 

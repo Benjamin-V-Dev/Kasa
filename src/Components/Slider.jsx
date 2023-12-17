@@ -36,6 +36,7 @@ export default function Slider({pictures}) {
                 />
             ))}
             <p onClick={nextImg} style={alone} className="arrow-right">＞</p>
+            <p style={alone} className="image-counter">{imgUrl + 1} / {pictures.length}</p>
         </div>
     );
 }
