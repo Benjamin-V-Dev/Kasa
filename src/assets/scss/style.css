@@ -280,6 +280,13 @@ header .active {
 .master-dropdown .dropdown .title-dropdown i {
   cursor: pointer;
 }
+.master-dropdown .dropdown .title-dropdown .fa-chevron-up {
+  transition: transform 0.3s ease; /* Transition pour un effet fluide dans les deux sens */
+}
+.master-dropdown .dropdown .title-dropdown .rotate {
+  transform: rotate(180deg); /* Ajustez l'angle de rotation selon vos besoins */
+  transition: all 0.3s ease; /* Transition pour un effet de rotation fluide */
+}
 .master-dropdown .dropdown .content-dropdown {
   height: auto;
   width: 100%;

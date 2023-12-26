@@ -25,6 +25,13 @@
             i{
                 cursor: pointer;
             }
+            .fa-chevron-up {
+                transition: transform 0.3s ease; /* Transition pour un effet fluide dans les deux sens */
+              }
+            .rotate {
+                transform: rotate(180deg); /* Ajustez l'angle de rotation selon vos besoins */
+                transition: all 0.3s ease; /* Transition pour un effet de rotation fluide */
+            }
         }
         
         .content-dropdown{
