@@ -1,4 +1,4 @@
-
+import { Helmet } from 'react-helmet';
 import Banner from "../../Components/Banner";
 import Dropdown from "../../Components/Dropdown";
 export default function About() {
@@ -13,17 +13,38 @@ export default function About() {
 
 
   return (
-    <div className="about">
-      <Banner imageUrl={'banner2.png'} imageAlt={'Paysage de montagne'}  bannerContent={""}/>
-      <div className="layout-dropdown-about">
-        <div className="master-dropdown">
-          <Dropdown title="Fiabilité" content={contentDropdownAbout[0]} />
-          <Dropdown title="Respect" content={contentDropdownAbout[1]} />
-          <Dropdown title="Service" content={contentDropdownAbout[2]} />
-          <Dropdown title="Sécurité" content={contentDropdownAbout[3]}/>
+    <>
+      <Helmet>
+        <meta charset="UTF-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        <title>Kasa | À propos</title>
+        <meta name="description" content="Découvrez tout sur Kasa, notre histoire et notre engagement à fournir des logements de qualité en France." />
+
+        <meta property="og:title" content="À propos de Kasa - Notre histoire et notre engagement" />
+        <meta property="og:description" content="Découvrez tout sur Kasa, notre histoire et notre engagement à fournir des logements de qualité en France." />
+        <meta property="og:image" content="/public/about-us.png" />
+        <meta property="og:url" content="/logo.png" />
+        <meta property="og:type" content="website" />
+
+        <meta name="twitter:title" content="À propos de Kasa - Notre histoire et notre engagement" />
+        <meta name="twitter:description" content="Découvrez tout sur Kasa, notre histoire et notre engagement à fournir des logements de qualité en France." />
+        <meta name="twitter:image" content="./public/about-us.png" />
+        <meta name="twitter:card" content="À propos de Kasa" />
+      </Helmet >
+
+
+      <div className="about">
+        <Banner imageUrl={'banner2.png'} imageAlt={'Paysage de montagne'} bannerContent={""} />
+        <div className="layout-dropdown-about">
+          <div className="master-dropdown">
+            <Dropdown title="Fiabilité" content={contentDropdownAbout[0]} />
+            <Dropdown title="Respect" content={contentDropdownAbout[1]} />
+            <Dropdown title="Service" content={contentDropdownAbout[2]} />
+            <Dropdown title="Sécurité" content={contentDropdownAbout[3]} />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
