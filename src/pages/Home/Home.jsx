@@ -4,8 +4,6 @@ import Banner from '../../Components/Banner'
 
 export default function Home({data}) {
 
-  alert("Ce site web est un projet fictif réalisé dans le cadre d'une formation")
-
   return (
     <>
       <Helmet>
